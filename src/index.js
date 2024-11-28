@@ -1,6 +1,6 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter  } from 'react-router-dom';
 import { Provider as ReduxProvider } from 'react-redux';
 import App from './App';
 import store from './store/index';
@@ -14,9 +14,9 @@ const rootContainer = createRoot(root);
 rootContainer.render(
   <>
     <ReduxProvider store={store}>
-      <BrowserRouter>
+      <HashRouter >
         <App />
-      </BrowserRouter>
+      </HashRouter >
     </ReduxProvider>
   </>
 );
