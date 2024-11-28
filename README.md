@@ -26,7 +26,7 @@
 1. **複製專案**
 
   ```bash
-複製程式碼
+
 git clone https://github.com/Ysq-qi/todolist1122
 cd todolist1122
 
@@ -62,7 +62,7 @@ src/
 ├── store/                 # Redux store 配置
 ├── styles/                # 全域樣式
 ├── utils/                 # 實用工具函數
-├── App.js                 # 主應用程式
+├── App.jsx                # 主應用程式
 └── index.js               # 入口文件
 
 ## 聯絡方式
