@@ -17,7 +17,7 @@ store.subscribe(
     saveState({
       todolist: store.getState().todolist,
     });
-  }, 1000)
+  }, 100)
 );
 
 export default store;
