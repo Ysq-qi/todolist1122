@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+# Todo List 應用程式
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 專案簡介
+一個基於 React 和 Redux 的待辦事項清單應用程式，提供了添加、刪除、切換完成狀態、進度條顯示、自定義滾動條以及排序功能。
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 功能特色
+- **添加待辦事項**：可以新增新的待辦事項，並自動滾動到列表底部。
+- **刪除待辦事項**：可以刪除現有的待辦事項。
+- **切換完成狀態**：點擊待辦事項前的方塊即可標記為完成或未完成。
+- **進度條顯示**：根據已完成的事項數量，實時更新進度條的百分比。
+- **自定義滾動條**：當待辦事項超過顯示區域時，出現自定義的滾動條。
+- **排序功能**：可以切換是否將已完成的待辦事項移動到列表底部。
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 環境需求
+- Node.js = 20
+- npm  
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 安裝步驟
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. **複製專案**
 
-### `npm run build`
+  ```bash
+複製程式碼
+git clone https://github.com/Ysq-qi/todolist1122
+cd todolist1122
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. **安裝依賴項**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  ```bash
+npm install
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. **運行應用程式**
 
-### `npm run eject`
+  ```bas
+npm start
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 專案結構
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+src/
+├── assets/                # 靜態資源（例如圖片、圖標等）
+├── components/            # 可重複使用的 React 組件
+│   ├── TodoList/          # TodoList 相關功能
+│   │   ├── AddTodo/       # 添加待辦功能
+│   │   ├── Divider/       # 分隔線組件
+│   │   ├── Header/        # 標題組件
+│   │   ├── ProgressBar/   # 進度條組件
+│   │   ├── TodoItemsList/ # 顯示待辦事項清單
+│   │   │   ├── TodoItem/  # 單個待辦項目
+│   │   ├── Toggle/        # 切換功能（例如完成事項排序）
+│   │   ├── todolistSlice.jsx # TodoList 的 Redux 狀態管理邏輯
+├── pages/                 # 頁面文件
+│   ├── home/              # 首頁相關
+│   │   ├── homeSlice.jsx  # Redux 狀態管理邏輯
+│   │   ├── index.jsx      # 首頁組件
+│   │   └── style.js       # 首頁樣式
+├── store/                 # Redux store 配置
+├── styles/                # 全域樣式
+├── utils/                 # 實用工具函數
+├── App.js                 # 主應用程式
+└── index.js               # 入口文件
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 聯絡方式
+- 如有任何疑問或建議，請透過 jacky55321261@gmail.com 與我聯繫。

@@ -1,0 +1,42 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:  # 手動執行的配置
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # 指定運行環境。
+
+    steps:
+      # 1. 檢出最新代碼
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # 2. 設置 Node.js 環境
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20  # 使用 Node.js 版本 20。
+
+      # 3. 安裝依賴項
+      - name: Install dependencies
+        run: npm install
+
+      # 4. 動態添加 homepage 欄位至 package.json
+      - name: Add homepage field dynamically
+        run: |
+          node -e "let pkg=require('./package.json'); pkg.homepage='https://ysq-qi.github.io/todolist1122/'; require('fs').writeFileSync('package.json', JSON.stringify(pkg, null, 2));"
+
+      # 5. 建置專案
+      - name: Build project
+        run: npm run build
+
+      # 6. 部署至 GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build  # 部署的目錄為 build/
