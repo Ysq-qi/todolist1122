@@ -8,7 +8,7 @@ const App = () => {
       <>
         <GlobalStyles />
         <Routes>
-            <Route path="/todolist1122" element={<Home />} />
+            <Route path="/" element={<Home />} />
         </Routes>
       </>
     );

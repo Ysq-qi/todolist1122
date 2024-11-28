@@ -24,20 +24,17 @@
 ## 安裝步驟
 
 1. **複製專案**
-
-  ```bash
-git clone https://github.com/Ysq-qi/todolist1122
-cd todolist1122
+    ```bash
+    git clone https://github.com/Ysq-qi/todolist1122
+    cd todolist1122
 
 2. **安裝依賴項**
-
-  ```bash
-npm install
+    ```bash
+    npm install
 
 3. **運行應用程式**
-
-  ```bas
-npm start
+    ```bas
+    npm start
 
 ### 專案結構
 
