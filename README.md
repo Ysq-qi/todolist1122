@@ -36,30 +36,5 @@
     ```bas
     npm start
 
-### 專案結構
-
-src/
-├── assets/                # 靜態資源（例如圖片、圖標等）
-├── components/            # 可重複使用的 React 組件
-│   ├── TodoList/          # TodoList 相關功能
-│   │   ├── AddTodo/       # 添加待辦功能
-│   │   ├── Divider/       # 分隔線組件
-│   │   ├── Header/        # 標題組件
-│   │   ├── ProgressBar/   # 進度條組件
-│   │   ├── TodoItemsList/ # 顯示待辦事項清單
-│   │   │   ├── TodoItem/  # 單個待辦項目
-│   │   ├── Toggle/        # 切換功能（例如完成事項排序）
-│   │   ├── todolistSlice.jsx # TodoList 的 Redux 狀態管理邏輯
-├── pages/                 # 頁面文件
-│   ├── home/              # 首頁相關
-│   │   ├── homeSlice.jsx  # Redux 狀態管理邏輯
-│   │   ├── index.jsx      # 首頁組件
-│   │   └── style.js       # 首頁樣式
-├── store/                 # Redux store 配置
-├── styles/                # 全域樣式
-├── utils/                 # 實用工具函數
-├── App.jsx                # 主應用程式
-└── index.js               # 入口文件
-
 ## 聯絡方式
 - 如有任何疑問或建議，請透過 jacky55321261@gmail.com 與我聯繫。
